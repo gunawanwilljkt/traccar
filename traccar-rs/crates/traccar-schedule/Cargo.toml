@@ -7,6 +7,7 @@ edition = "2021"
 traccar-model = { path = "../traccar-model" }
 traccar-storage = { path = "../traccar-storage" }
 serde.workspace = true
+serde_json.workspace = true
 chrono.workspace = true
 async-trait.workspace = true
 thiserror.workspace = true

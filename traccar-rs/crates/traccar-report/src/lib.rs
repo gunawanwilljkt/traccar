@@ -7,7 +7,6 @@ pub mod combined;
 
 use async_trait::async_trait;
 use chrono::{DateTime, Utc};
-use std::sync::Arc;
 use traccar_storage::Storage;
 
 #[derive(Debug, thiserror::Error)]

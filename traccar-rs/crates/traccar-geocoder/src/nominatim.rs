@@ -1,6 +1,7 @@
 use async_trait::async_trait;
 use crate::{Geocoder, GeocoderError};
 
+#[allow(dead_code)]
 pub struct NominatimGeocoder {
     url: String,
     key: Option<String>,

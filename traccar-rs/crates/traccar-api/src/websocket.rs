@@ -8,10 +8,9 @@ use axum::{
     Router,
 };
 use dashmap::DashMap;
-use futures::{SinkExt, StreamExt};
 use std::sync::Arc;
 use tokio::sync::broadcast;
-use tracing::{debug, info};
+use tracing::info;
 
 use crate::AppState;
 
@@ -86,7 +85,7 @@ async fn handle_socket(mut socket: WebSocket) {
     while let Some(msg) = socket.recv().await {
         match msg {
             Ok(Message::Text(text)) => {
-                debug!("WebSocket received: {}", text);
+                tracing::debug!("WebSocket received: {}", text);
             }
             Ok(Message::Close(_)) => break,
             Err(_) => break,

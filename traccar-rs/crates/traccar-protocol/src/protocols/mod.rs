@@ -267,7 +267,7 @@ pub mod ywt;
 use crate::ProtocolRegistry;
 
 /// Register all protocol decoders with the protocol registry.
-pub fn register_all(_registry: &mut ProtocolRegistry) {
+pub fn register_all(registry: &mut ProtocolRegistry) {
     // Protocol decoders are registered here as they are fully implemented.
     // Each protocol module contains a decoder struct with a placeholder implementation.
     //
